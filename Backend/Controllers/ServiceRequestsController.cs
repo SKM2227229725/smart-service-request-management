@@ -1,9 +1,10 @@
+
 using Backend.Data;
 using Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Backend.Controllers;
+namespace BackendControllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -20,14 +21,18 @@ public class ServiceRequestsController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<ServiceRequest>>> GetServiceRequests()
     {
-        return await _context.ServiceRequests.ToListAsync();
+        return await _context.ServiceRequests
+            .Include(sr => sr.User)
+            .ToListAsync();
     }
 
     // GET: api/ServiceRequests/5
     [HttpGet("{id}")]
     public async Task<ActionResult<ServiceRequest>> GetServiceRequest(int id)
     {
-        var request = await _context.ServiceRequests.FindAsync(id);
+        var request = await _context.ServiceRequests
+            .Include(sr => sr.User)
+            .FirstOrDefaultAsync(sr => sr.Id == id);
 
         if (request == null)
         {
