@@ -14,6 +14,8 @@ public class ServiceRequest
 
     public int UserId { get; set; }
 
+    public User? User { get; set; }
+
     public string? AssignedTo { get; set; }
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
