@@ -6,7 +6,7 @@ A full-stack web application for creating, managing, assigning, filtering, and t
 The project is built using \*\*ASP.NET Core Web API, C#, Entity Framework Core, SQL Server, and React.js\*\*.
 
 \## Features
-\- Create new service requests
+\- Create new service requests depend upon  the our requarment
 
 \- View all service requests
 
