@@ -3,17 +3,9 @@
 
 
 A full-stack web application for creating, managing, assigning, filtering, and tracking service requests.
-
-
-
 The project is built using \*\*ASP.NET Core Web API, C#, Entity Framework Core, SQL Server, and React.js\*\*.
 
-
-
 \## Features
-
-
-
 \- Create new service requests
 
 \- View all service requests
@@ -45,9 +37,6 @@ The project is built using \*\*ASP.NET Core Web API, C#, Entity Framework Core, 
 
 
 \## Tech Stack
-
-
-
 \### Backend
 
 \- C#
